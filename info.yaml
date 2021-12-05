@@ -1,0 +1,18 @@
+- hosts: ansclient
+  become: yes
+
+  tasks:
+    - name: update + install Nginx
+      apt:
+       pkg:
+        - nginx
+      
+    - name: copy index file
+      copy:
+        src: ~/Documents/les5/ansible/index.nginx-debian.html
+        dest: /var/www/html
+        force: yes
+        owner: ub
+        group: ub
+        mode: '0644'
+     

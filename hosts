@@ -1,0 +1,5 @@
+[ansclient]
+192.168.77.108
+
+[ansclient:vars]
+ansible_user=ub
